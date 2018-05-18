@@ -47,13 +47,18 @@ export class App {
     this.update();
   }
 
+  getSelectedAnswer(quizItem) {
+    const selected = quizItem.answers.find(a => a.isSelected);
+    return selected || -1;
+  }
+
   onSubmit() {
     const onSubmit = this.props.onSubmit;
     const results = {};
-    this.quizItems.forEach(quizItem => {
-      const question = quizItem.question.value;
-      const answer = quizItem.answers.choices[quizItem.answers.selectedIndex].value;
-      results[question] = answer;
+    store.value.list.forEach(quizItem => {
+      const question = quizItem.question;
+      const answer = this.getSelectedAnswer(quizItem);
+      results[question] = answer && answer.value;
     });
     onSubmit(
       results
