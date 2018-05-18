@@ -1,0 +1,38 @@
+{
+  "name": "quiz-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wepback.config.js",
+  "dependencies": {
+    "animejs": "^2.2.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.8.3",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "webpack-cli": "^2.1.3"
+  },
+  "scripts": {
+    "dev-server": "webpack-dev-server --color",
+    "dev-html": "cp build/index.html dist/index.html",
+    "clear-dist": "rm -rf dist/ && mkdir dist/",
+    "start": "npm run clear-dist && npm run dev-html && npm run dev-server & webpack --watch",
+    "build": "NODE_ENV=production webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

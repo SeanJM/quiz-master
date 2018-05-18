@@ -1,0 +1,133 @@
+@import "@components/index";
+
+* {
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px 20px 40px;
+}
+
+h1 {
+  letter-spacing: -1px;
+}
+
+h5 {
+  margin-bottom: 5px;
+  color: red;
+}
+
+.question {
+  display: inline-block;
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.answer {
+  width: 100%;
+  display: inline-block;
+}
+
+.answer_choices {
+  background: black;
+}
+
+.quiz-item {
+  margin-bottom: 20px;
+}
+
+.choice {
+  display: inline-block;
+  padding: 8px 8px;
+  line-height: 14px;
+  font-size: 13px;
+  width: 100px;
+  height: 60px;
+  background: black;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.choice_text {
+  position: relative;
+  z-index: 1;
+}
+
+.choice_selected {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 50%;
+  top: 50%;
+  margin-left: -60px;
+  margin-top: -60px;
+  opacity: 0;
+  background: red;
+  border-radius: 50%;
+}
+
+.choice:hover {
+  background: purple;
+}
+
+.choice:hover .choice_selected {
+  background: orange;
+}
+
+.submit-button {
+  margin-top: 20px;
+  background: red;
+  color: #fff;
+  height: 36px;
+  padding: 0 20px;
+  border-radius: 2px;
+  line-height: 36px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: right;
+  background: #fff;
+  padding: 8px 8px;
+}
+
+.indicator {
+  display: inline-block;
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+}
+
+.indicator_thumb {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: red;
+  opacity: 0;
+}
+
+.indicator--select {
+  border-color: red;
+}
+
+.indicator + .indicator {
+  margin-left: 8px;
+}

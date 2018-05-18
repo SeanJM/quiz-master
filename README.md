@@ -1,0 +1,27 @@
+# A pretty decent scaffold
+
+This is starting to get to a pretty state of the art place.
+
+The next step is JSX, then React or Vue or Angular.
+
+Then after that, the next step is type systems using TypeScript
+
+## What's included?
+
+- Webpack configuration
+- Babel tranformation of latest JavaScript to ES5 for browser compatibility
+- ESLint (JavaScript code linting)
+- SASS
+- Hot module replacement (Automatic reloading of the page when files change)
+- Souce control with Git
+
+## What text editor to use?
+
+- Visual Studio Code
+- Sublime Text
+
+## How to start this?
+
+Install NodeJS if you haven't already. In the command line, run `npm i`
+
+For eslint you will want to install it globally: I don't know what that is in windows, but in a mac that's `sudo npm i eslint`
