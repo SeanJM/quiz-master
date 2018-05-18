@@ -2,18 +2,24 @@
 
 This is starting to get to a pretty state of the art place.
 
-The next step is JSX, then React or Vue or Angular.
-
-Then after that, the next step is type systems using TypeScript
-
 ## What's included?
 
 - Webpack configuration
+- Single source of truth state pattern
 - Babel tranformation of latest JavaScript to ES5 for browser compatibility
 - ESLint (JavaScript code linting)
 - SASS
 - Hot module replacement (Automatic reloading of the page when files change)
 - Souce control with Git
+
+## Future
+
+The next steps are 
+
+- Lazy copying / merging of objects
+- JSX
+- React or Vue or Angular.
+- TypeScript
 
 ## What text editor to use?
 
