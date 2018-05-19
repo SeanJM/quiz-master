@@ -4,13 +4,15 @@ This is starting to get to a pretty state of the art place.
 
 ## What's included?
 
-- Webpack configuration
-- Single source of truth state pattern
+- A Webpack configuration designed to grow (webpack-merge)
 - Babel tranformation of latest JavaScript to ES5 for browser compatibility
 - ESLint (JavaScript code linting)
 - SASS
 - Hot module replacement (Automatic reloading of the page when files change)
 - Souce control with Git
+- Single source of truth state pattern
+- Component based architecture
+- Hyperscript node creation
 
 ## Future
 

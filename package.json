@@ -14,10 +14,12 @@
     "eslint": "^4.19.1",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",
+    "nodemon": "^1.17.4",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "webpack": "^4.8.3",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
@@ -30,7 +32,7 @@
     "clear-dist": "rm -rf dist/ && mkdir dist/",
     "start": "npm run clear-dist && npm run dev-html && npm run dev-server & webpack --watch",
     "build": "NODE_ENV=production webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon test"
   },
   "keywords": [],
   "author": "",
