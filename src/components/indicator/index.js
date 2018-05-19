@@ -1,10 +1,10 @@
 import { h } from "@h";
 import anime from "animejs";
-import { deepMerge } from "@deep";
+import { merge } from "lodash";
 
 export class Indicator {
   constructor(props) {
-    this.props = deepMerge(props);
+    this.props = merge(props);
 
     this.element = h("div", { class: "indicator" }, [
       this.thumb = h("div", { class: "indicator_thumb" })

@@ -1,5 +1,4 @@
-import { deepMerge } from "@scripts/deep-merge";
-import { deepCopy } from "@scripts/deep-copy";
+import { merge } from "lodash";
 import { deepCompare } from "@scripts/deep-compare";
 
 function defaultMapState(state) {
@@ -25,7 +24,7 @@ export class Singleton {
 
   set(value) {
     this.prev = this.value;
-    this.value = deepMerge(deepCopy(this.value), deepCopy(value));
+    this.value = merge({}, this.value, value);
     this.triggerChange(this.prev);
   }
 
