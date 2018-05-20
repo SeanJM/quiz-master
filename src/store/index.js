@@ -1,4 +1,4 @@
-import { Singleton } from "@/class/singleton";
+import { Store } from "@class/store";
 export * from "./with-store";
 
 const DEFAULT_ANSWERS = [
@@ -45,7 +45,7 @@ const BEER_ANSWERS = [
   },
 ];
 
-export const store = new Singleton({
+export const store = new Store({
   list: [{
     id: 0, // IDs are used to identify the question in the list
     question: "Fish are tasty",

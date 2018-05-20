@@ -5,7 +5,7 @@ function defaultMapState(state) {
   return state;
 }
 
-export class Singleton {
+export class Store {
   constructor(state) {
     this.value = state || {};
     this.listeners = [];
