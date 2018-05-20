@@ -37,7 +37,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="questions">
         {this.props.list.map((quizItemOptions, i) => (
