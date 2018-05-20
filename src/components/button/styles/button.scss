@@ -1,0 +1,51 @@
+%button {
+  display: inline-block;
+  position: relative;
+  user-select: none;
+  height: $input-size;
+  cursor: default;
+
+  .button_label {
+    padding: 0 $u4;
+    font-size: $font-size;
+    line-height: $input-size;
+    color: $background;
+    position: relative;
+    user-select: none;
+    z-index: 1;
+  }
+
+  .button_face {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 2px;
+    background: $foreground;
+  }
+}
+
+%button-primary {
+  .button_face {
+    background: $primary-background;
+  }
+
+  .button_label {
+    color: $primary-foreground;
+  }
+
+  &:active {
+    .button_label {
+      line-height: $input-size + 1;
+    }
+  }
+}
+
+.button {
+  @extend %button;
+}
+
+.button-primary {
+  @extend %button-primary;
+}

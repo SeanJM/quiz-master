@@ -1,0 +1,40 @@
+.select {
+  background: $black;
+  display: inline-block;
+  width: 100%;
+  cursor: default;
+  user-select: none;
+}
+
+.select_option {
+  display: inline-block;
+  height: $u18;
+  width: $u30;
+  padding: $u3;
+  position: relative;
+  overflow: hidden;
+  
+  &:hover {
+    background: $active;
+  }
+}
+
+.select_option_selected {
+  opacity: 0;
+  width: $u36;
+  height: $u36;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: $u36/-2;
+  margin-top: $u36/-2;
+  background: $primary;
+}
+
+.select_option_label {
+  z-index: 1;
+  font-size: $font-size;
+  color: #fff;
+  position: relative;
+}

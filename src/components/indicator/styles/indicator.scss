@@ -1,0 +1,30 @@
+.indicator {
+  display: inline-block;
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+}
+
+.indicator_thumb {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: red;
+  opacity: 0;
+}
+
+.indicator--select {
+  border-color: red;
+}
+
+.indicator + .indicator {
+  margin-left: 8px;
+}

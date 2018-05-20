@@ -3,7 +3,7 @@
 // format
 export function h(tagName, props, children) {
   const childrenCopy = children ? [].concat(children) : []; // Copying prevents side effects to 'children'
-  
+
   if (typeof tagName === "function") {
     return new tagName(props, childrenCopy);
   }
@@ -13,7 +13,7 @@ export function h(tagName, props, children) {
 
 export function createElement(tagName, props, children) {
   let element = document.createElement(tagName);
-  
+
   for (var attribute in props) {
     if (props.hasOwnProperty(attribute)) {
       // On a prefix for event listeners, similar to JQuery
@@ -24,7 +24,7 @@ export function createElement(tagName, props, children) {
       }
     }
   }
-  
+
   for (var i = 0, n = children.length; i < n; i++) {
     if (typeof children[i] === "string") {
       children[i] = new Text(children[i]);

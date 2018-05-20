@@ -1,0 +1,15 @@
+$black: #000;
+$grey: lighten($black, 30%);
+$red: rgb(219, 43, 81);
+$orange: adjust-hue($red, 30deg);
+$background: #fff;
+$foreground: $black;
+$primary: $red;
+$primary-background: $red;
+$primary-foreground: #fff;
+$active: $grey;
+$selected: $grey;
+
+$font-size: 14px;
+$line-height: $font-size * 1.21;
+$input-size: 36px;

@@ -1,5 +1,5 @@
 import { merge } from "lodash";
-import { deepCompare } from "@scripts/deep-compare";
+import { deepCompare } from "@/scripts/deep-compare";
 
 function defaultMapState(state) {
   return state;
@@ -9,17 +9,6 @@ export class Singleton {
   constructor(state) {
     this.value = state || {};
     this.listeners = [];
-  }
-
-  paths(value) {
-    function path(object, subpath) {
-      const paths = [];
-      for (var k in object) {
-        paths.push(path(object[k]), subpath.concat(k));
-      }
-      return paths;
-    }
-    return path(value, []);
   }
 
   set(value) {
@@ -33,10 +22,15 @@ export class Singleton {
     // We take a map to give our components nicer objects to work with
     this.listeners.push({
       callback: callback,
-      mapState: mapState
+      mapState: mapState,
     });
     // Trigger the callback on its binding to give the component an initial state
     callback(mapState(this.value));
+  }
+
+  offChange(callback) {
+    this.listeners = this.listeners.filter((a) => a.callback !== callback);
+    return this;
   }
 
   triggerChange(prev) {

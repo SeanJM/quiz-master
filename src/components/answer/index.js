@@ -1,23 +1,13 @@
-import { h } from "@h";
-import { deepCopy } from "@deep";
+import React, { Component } from "react";
+import { dispatch } from "@/action";
 import anime from "animejs";
 
-export class Choice {
-  constructor(props) {
-    this.props = deepCopy(props);
-    this.props.isSelected = false;
-    this.element = h("div", {
-      class: "choice",
-      onClick: () => {
-        props.onSelect({
-          target: this,
-          ...this.props
-        });
-      }
-    }, [
-        h("div", { class: "choice_text" }, [props.value]),
-        this.selected = h("div", { class: "choice_selected" })
-      ]);
+export class Answer extends Component {
+  onClick() {
+    dispatch("QUIZ_SELECT_ANSWER", {
+      id: this.props.id,
+      questionID: this.props.questionID,
+    });
   }
 
   clear() {
@@ -32,9 +22,9 @@ export class Choice {
         complete: () => {
           const classes = this.element.className.split(" ");
           this.element.className = classes
-            .filter(className => className !== "choice--selected")
+            .filter((className) => className !== "answer--selected")
             .join(" ");
-        }
+        },
       });
     }
   }
@@ -49,9 +39,21 @@ export class Choice {
         easing: "easeOutQuad",
         duration: 300,
         complete: () => {
-          this.element.className += " choice--selected";
-        }
+          this.element.className += " answer--selected";
+        },
       });
     }
+  }
+
+  render() {
+    return (
+      <div
+        className="answer"
+        onClick={() => this.onClick()}
+      >
+        <div className="answer_text">{this.props.value}</div>
+        <div className="answer_selected" />
+      </div>
+    );
   }
 }

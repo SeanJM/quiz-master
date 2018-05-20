@@ -1,11 +1,10 @@
-import { h } from "@h";
+import React from "react";
 
-export class Question {
-  constructor(props) {
-    this.element = h("div", { class: "question" }, [ 
-      h("h5", {}, "Question"),
-      props.question
-    ]);
-    this.value = props.question;
-  }
+export function Question(props) {
+  return (
+    <div className="question">
+      <h5>Question</h5>
+      {props.question}
+    </div>
+  );
 }
