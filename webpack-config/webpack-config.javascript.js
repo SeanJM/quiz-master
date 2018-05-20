@@ -25,6 +25,7 @@ module.exports = {
       "@deep": path.resolve(__root, "src/scripts/deep"),
       "@": path.resolve(__root, "src/"),
       "@components": path.resolve(__root, "src/components"),
+      "@class": path.resolve(__root, "src/class"),
       "@store": path.resolve(__root, "src/store"),
       "@action": path.resolve(__root, "src/action"),
     },
