@@ -11,7 +11,12 @@ export function withStore(C, mapStateToProps) {
     }
 
     componentDidMount() {
-      store.onChange(this.handleUpdate, mapStateToProps);
+      store.onChange(
+        this.handleUpdate,
+        mapStateToProps
+          ? (state) => mapStateToProps(state, this.props)
+          : null
+      );
     }
 
     componentWillUnmount() {
