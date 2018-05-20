@@ -24,8 +24,6 @@ export class Singleton {
       callback: callback,
       mapState: mapState,
     });
-    // Trigger the callback on its binding to give the component an initial state
-    callback(mapState(this.value));
   }
 
   offChange(callback) {
