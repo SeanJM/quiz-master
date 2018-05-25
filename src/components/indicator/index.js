@@ -41,7 +41,7 @@ export class Indicator extends Component {
 
   render() {
     return (
-      <div className="indicator">
+      <div className={`indicator` + (this.props.isSelected ? ` indicator--select` : ``)}>
         <div
           ref={(node) => { this.thumbNode = node; }}
           className="indicator_thumb" />

@@ -4,7 +4,6 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 2px solid black;
   position: relative;
 }
 
@@ -17,12 +16,13 @@
   margin-left: -5px;
   margin-top: -5px;
   border-radius: 50%;
-  background: red;
-  opacity: 0;
+  background: $black;
 }
 
 .indicator--select {
-  border-color: red;
+  .indicator_thumb {
+    background: $red;
+  }
 }
 
 .indicator + .indicator {
