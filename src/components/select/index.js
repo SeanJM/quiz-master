@@ -22,6 +22,14 @@ export class Option extends Component {
     });
   }
 
+  componentDidMount() {
+    if (this.props.isSelected) {
+      this.onSelect();
+    } else {
+      this.onDeselect();
+    }
+  }
+
   // This is a "lifecycle" method, which is triggered any time that the value
   // of 'this.props' is about to change.
   componentWillReceiveProps(nextProps) {

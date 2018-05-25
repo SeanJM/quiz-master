@@ -1,4 +1,4 @@
-import { Store } from "@class/store";
+import { PersiStore } from "@class/persistore";
 export * from "./with-store";
 
 const DEFAULT_ANSWERS = [
@@ -45,7 +45,7 @@ const BEER_ANSWERS = [
   },
 ];
 
-export const store = new Store({
+export const store = new PersiStore({
   list: [{
     id: 0, // IDs are used to identify the question in the list
     question: "Fish are tasty",

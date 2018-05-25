@@ -25,6 +25,14 @@ export class Indicator extends Component {
     });
   }
 
+  componentDidMount() {
+    if (this.props.isSelected) {
+      this.onSelect();
+    } else {
+      this.onDeselect();
+    }
+  }
+
   componentWillReceiveProps(nextProps) {
     if (!this.props.isSelected && nextProps.isSelected) {
       this.onSelect();
