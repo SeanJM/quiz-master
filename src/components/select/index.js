@@ -25,8 +25,6 @@ export class Option extends Component {
   componentDidMount() {
     if (this.props.isSelected) {
       this.onSelect();
-    } else {
-      this.onDeselect();
     }
   }
 
