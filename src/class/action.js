@@ -47,7 +47,7 @@ export class Action {
     const callbackList = this.subscribers[eventName] || [];
     if (this.isDebug) {
       console.log(
-        "%c ACTION %c%c DISPATCH %c %c " + eventName + " (" + callbackList.length + ") ",
+        "%c ACTION %c%c DISPATCH %c " + eventName + " (" + callbackList.length + ") ",
         "font-weight: bold; background: #3bba9b; color: #fff;",
         "",
         "font-weight: bold; background: #d5773b; color: #fff;",
